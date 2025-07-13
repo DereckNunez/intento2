@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos al gym a hacer pierna</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $(".p1").hover(function(){
+                let arriba = Math.random() * (400 - 1) + 1;
+                let abajo = Math.random() * (609 - 1) + 1;
+                $(this).css("top", arriba + "px");
+                $(this).css("left", abajo + "px");
+            });
+
+            window.dijoSi = function() {
+                document.getElementById("Si").style.display = "block";
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>¿Vamos a hacer pierna juntos?</h1>
+        </div>
+        <div class="opciones">
+            <p class="p1">No</p>
+            <p onclick="dijoSi()" class="p2">Sí</p> 
+            <div id="Si" style="display:none;">
+                <h2>Sabría que ibas a decir que sí, soy el mejor coach</h2>
+            </div>          
+        </div>
+    </div>        
+</body>
+</html>
